@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PVf-do-grO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="BdP-lE-lEG">
+            <objects>
+                <viewController storyboardIdentifier="Search" id="PVf-do-grO" customClass="SearchViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="479-Ck-Pv4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-mc-Lle">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="b9P-NI-K6T" customClass="CustomCollectionFlowLayout" customModule="InstagramApp" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCustomCell" id="CzS-3o-bcm" customClass="SearchCustomCell" customModule="InstagramApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jkt-wZ-rbn">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="183"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q3r-hk-eE9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="183"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="q3r-hk-eE9" secondAttribute="bottom" id="LCO-c8-2dV"/>
+                                                <constraint firstItem="q3r-hk-eE9" firstAttribute="top" secondItem="Jkt-wZ-rbn" secondAttribute="top" id="RgK-gR-WaO"/>
+                                                <constraint firstAttribute="trailing" secondItem="q3r-hk-eE9" secondAttribute="trailing" id="WEf-28-fZ0"/>
+                                                <constraint firstItem="q3r-hk-eE9" firstAttribute="leading" secondItem="Jkt-wZ-rbn" secondAttribute="leading" id="haR-YB-Rtx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="146" height="183"/>
+                                        <connections>
+                                            <outlet property="imageSearchView" destination="q3r-hk-eE9" id="4d8-To-Exs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CCt-mc-Lle" secondAttribute="bottom" id="Aik-Gp-OCf"/>
+                            <constraint firstItem="CCt-mc-Lle" firstAttribute="trailing" secondItem="vxa-hj-B4c" secondAttribute="trailing" id="Moj-MV-kTd"/>
+                            <constraint firstItem="CCt-mc-Lle" firstAttribute="leading" secondItem="vxa-hj-B4c" secondAttribute="leading" id="h0Y-AJ-u1I"/>
+                            <constraint firstItem="CCt-mc-Lle" firstAttribute="top" secondItem="479-Ck-Pv4" secondAttribute="top" id="xii-Wh-bSF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vxa-hj-B4c"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="CCt-mc-Lle" id="rzQ-Hb-DYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcR-YA-UY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+</document>
